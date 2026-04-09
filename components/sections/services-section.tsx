@@ -76,7 +76,7 @@ export function ServicesSection() {
             return (
               <FadeIn key={service.title} delay={index * 0.06}>
                 <Card className="group h-full bg-gradient-to-br from-card to-card/70 transition-all duration-300 hover:-translate-y-2 hover:border-primary/35 hover:shadow-[0_30px_80px_-35px_rgba(14,165,233,0.35)]">
-                  <CardContent className="flex h-full flex-col gap-6 p-7">
+                  <CardContent className="flex h-full flex-col gap-5 p-7">
                     <div className="flex h-14 w-14 items-center justify-center rounded-[1.4rem] bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                       <Icon className="h-6 w-6" />
                     </div>

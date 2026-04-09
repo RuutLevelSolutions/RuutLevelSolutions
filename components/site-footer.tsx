@@ -19,10 +19,10 @@ export function SiteFooter() {
   return (
     <footer
       id="contact"
-      className="border-t border-border/60 bg-background/95 py-16"
+      className="border-t border-border/60 bg-background/95 py-16 sm:py-20"
     >
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1.3fr_0.7fr_0.7fr_1fr] lg:px-8">
-        <div className="space-y-5">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr] lg:gap-10 lg:px-8">
+        <div className="space-y-5 lg:pr-6">
           <div className="flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary text-lg font-bold text-primary-foreground shadow-lg shadow-primary/25">
               R
@@ -44,12 +44,14 @@ export function SiteFooter() {
           <div className="flex items-center gap-3">
             <Link
               href="#"
+              aria-label="LinkedIn"
               className="rounded-full border border-border/70 p-3 text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
             >
               <Linkedin className="h-4 w-4" />
             </Link>
             <Link
               href="#"
+              aria-label="Twitter"
               className="rounded-full border border-border/70 p-3 text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
             >
               <Twitter className="h-4 w-4" />
@@ -57,7 +59,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div>
+        <div className="space-y-5">
           <h3 className="mb-5 text-sm font-semibold uppercase tracking-[0.24em] text-foreground/80">
             Quick Links
           </h3>
@@ -72,7 +74,7 @@ export function SiteFooter() {
           </ul>
         </div>
 
-        <div>
+        <div className="space-y-5">
           <h3 className="mb-5 text-sm font-semibold uppercase tracking-[0.24em] text-foreground/80">
             Services
           </h3>
@@ -87,22 +89,34 @@ export function SiteFooter() {
           </ul>
         </div>
 
-        <div className="space-y-4 text-sm text-muted-foreground">
+        <div className="space-y-5 text-sm text-muted-foreground">
           <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-foreground/80">
             Contact
           </h3>
-          <p className="flex items-start gap-3">
-            <Mail className="mt-0.5 h-4 w-4 text-primary" />
-            hello@ruutlevel.com
-          </p>
-          <p className="flex items-start gap-3">
-            <Phone className="mt-0.5 h-4 w-4 text-primary" />
-            +1 (415) 555-0147
-          </p>
-          <p className="flex items-start gap-3">
-            <MapPin className="mt-0.5 h-4 w-4 text-primary" />
-            350 Mission Street, San Francisco, CA 94105
-          </p>
+          <div className="space-y-4">
+            <p className="flex items-start gap-3 leading-6">
+              <Mail className="mt-1 h-4 w-4 shrink-0 text-primary" />
+              <Link
+                href="mailto:enquiry@ruutlevelsolutions.com"
+                className="break-all hover:text-foreground"
+              >
+                enquiry@ruutlevelsolutions.com
+              </Link>
+            </p>
+            <p className="flex items-start gap-3 leading-6">
+              <Phone className="mt-1 h-4 w-4 shrink-0 text-primary" />
+              <Link href="tel:+917219311914" className="hover:text-foreground">
+                +91 72193 11914
+              </Link>
+            </p>
+            <p className="flex items-start gap-3 leading-6">
+              <MapPin className="mt-1 h-4 w-4 shrink-0 text-primary" />
+              <span>
+                H.O. Aanand Nagar, Shivneri Gate, Bhadgaon, Dist. Jalgaon
+                424105
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

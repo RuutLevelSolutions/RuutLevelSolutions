@@ -24,7 +24,7 @@ const points = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="px-6 py-24 lg:px-8">
+    <section id="about" className="px-6 py-24 lg:px-8 lg:py-28">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
         <FadeIn>
           <SectionHeading
@@ -40,8 +40,8 @@ export function AboutSection() {
 
             return (
               <FadeIn key={point.title} delay={index * 0.06}>
-                <Card className="group bg-gradient-to-br from-card to-card/70 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30">
-                  <CardContent className="flex gap-5 p-7">
+                <Card className="group h-full bg-gradient-to-br from-card to-card/70 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30">
+                  <CardContent className="flex h-full gap-5 p-7 sm:items-start">
                     <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-[1.4rem] bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                       <Icon className="h-6 w-6" />
                     </div>

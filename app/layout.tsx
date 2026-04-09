@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.ruutlevel.com"),
+  metadataBase: new URL("https://www.ruutlevelsolutions.com"),
   title: "Ruut Level Solutions | Root-Level Solutions for Real-World Problems",
   description:
     "Ruut Level Solutions builds practical digital products, service platforms, automation systems, and custom software that solve real-world problems for customers and businesses.",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "Ruut Level Solutions | Root-Level Solutions for Real-World Problems",
     description:
       "Practical digital products and business platforms built to solve day-to-day problems, improve customer convenience, and support business growth.",
-    url: "https://www.ruutlevel.com",
+    url: "https://www.ruutlevelsolutions.com",
     siteName: "Ruut Level Solutions",
     type: "website",
   },

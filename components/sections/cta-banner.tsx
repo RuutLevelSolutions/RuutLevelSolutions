@@ -11,7 +11,7 @@ export function CtaBanner() {
         <FadeIn>
           <Card className="overflow-hidden border-primary/20 bg-slate-950 text-white shadow-[0_32px_120px_-38px_rgba(14,165,233,0.45)] dark:border-primary/20">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.22),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(99,102,241,0.18),transparent_38%)]" />
-            <CardContent className="relative flex flex-col gap-8 p-8 sm:p-10 lg:flex-row lg:items-center lg:justify-between lg:p-12">
+            <CardContent className="relative flex flex-col gap-8 p-8 sm:p-10 lg:flex-row lg:items-center lg:justify-between lg:gap-10 lg:p-12">
               <div className="max-w-2xl space-y-4">
                 <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-sky-200">
                   Build Something Useful
@@ -26,8 +26,13 @@ export function CtaBanner() {
                 </p>
               </div>
 
-              <div className="flex flex-col gap-4 sm:flex-row">
-                <Button asChild href="#contact" size="lg" className="bg-white text-slate-950 hover:bg-slate-100">
+              <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap lg:justify-end">
+                <Button
+                  asChild
+                  href="#contact"
+                  size="lg"
+                  className="w-full bg-white text-slate-950 hover:bg-slate-100 sm:w-auto"
+                >
                   <span>
                     Contact Us
                     <ArrowRight className="h-4 w-4" />
@@ -35,12 +40,12 @@ export function CtaBanner() {
                 </Button>
                 <Button
                   asChild
-                  href="mailto:hello@ruutlevel.com"
+                  href="mailto:enquiry@ruutlevelsolutions.com"
                   size="lg"
                   variant="secondary"
-                  className="border-white/10 bg-white/5 text-white hover:bg-white/10"
+                  className="w-full border-white/10 bg-white/5 text-white hover:bg-white/10 sm:w-auto"
                 >
-                  <span>hello@ruutlevel.com</span>
+                  <span>enquiry@ruutlevelsolutions.com</span>
                 </Button>
               </div>
             </CardContent>

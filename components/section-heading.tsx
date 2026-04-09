@@ -20,7 +20,7 @@ export function SectionHeading({
         align === "center" && "mx-auto text-center"
       )}
     >
-      <span className="inline-flex rounded-full border border-border/70 bg-background/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-primary">
+      <span className="inline-flex items-center rounded-full border border-border/70 bg-background/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-primary">
         {eyebrow}
       </span>
       <h2 className="text-balance font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl lg:text-5xl">

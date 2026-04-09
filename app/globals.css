@@ -57,12 +57,13 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
     background-image:
       linear-gradient(to bottom, hsl(var(--background)), hsl(var(--background))),
       radial-gradient(circle at top, hsl(var(--primary) / 0.1), transparent 26%),
       radial-gradient(circle at bottom right, rgba(125, 211, 252, 0.14), transparent 24%);
     background-attachment: fixed;
+    min-height: 100vh;
   }
 
   h1,

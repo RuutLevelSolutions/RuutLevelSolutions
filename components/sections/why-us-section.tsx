@@ -46,7 +46,7 @@ const advantages = [
 
 export function WhyUsSection() {
   return (
-    <section className="px-6 py-24 lg:px-8">
+    <section className="px-6 py-24 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl space-y-14">
         <FadeIn>
           <SectionHeading
@@ -64,7 +64,7 @@ export function WhyUsSection() {
             return (
               <FadeIn key={item.title} delay={index * 0.05}>
                 <Card className="h-full bg-gradient-to-b from-card to-card/70">
-                  <CardContent className="space-y-4 p-7">
+                  <CardContent className="flex h-full flex-col gap-4 p-7">
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                       <Icon className="h-5 w-5" />
                     </div>

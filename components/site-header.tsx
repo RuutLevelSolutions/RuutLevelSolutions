@@ -15,16 +15,16 @@ const navigation = [
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/40 bg-background/70 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <Link href="/" className="flex items-center gap-3">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-8">
+        <Link href="/" className="flex min-w-0 items-center gap-3">
           <div className="flex h-11 w-11 items-center justify-center rounded-[1.35rem] bg-primary text-lg font-bold text-primary-foreground shadow-lg shadow-primary/25">
             R
           </div>
-          <div>
-            <p className="font-heading text-lg font-semibold tracking-tight">
+          <div className="min-w-0">
+            <p className="truncate font-heading text-lg font-semibold tracking-tight">
               Ruut Level Solutions
             </p>
-            <p className="text-xs text-muted-foreground">
+            <p className="truncate text-xs text-muted-foreground">
               Root-Level Digital Solutions
             </p>
           </div>
@@ -42,7 +42,7 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center gap-3">
           <ThemeToggle />
           <Button asChild href="#contact" className="hidden sm:inline-flex">
             <span>
