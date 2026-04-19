@@ -168,15 +168,13 @@ export function HeroSection() {
             </Card>
           </FadeIn>
 
-          <FadeIn delay={0.14} className="grid auto-rows-fr gap-4 sm:grid-cols-3 lg:grid-cols-1">
+          <FadeIn delay={0.14} className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
             {trustMetrics.map((metric, index) => (
               <Card
                 key={metric.label}
-                className={`h-full overflow-hidden border-border/60 bg-card/92 ${
-                  index === 0 ? "lg:mt-8" : ""
-                }`}
+                className="h-full min-h-32 overflow-hidden border-border/60 bg-card/92"
               >
-                <CardContent className="flex h-full flex-col items-start gap-4 p-6 sm:justify-between lg:flex-row lg:items-center lg:justify-start">
+                <CardContent className="flex h-full flex-col items-start justify-between gap-4 p-6 lg:flex-row lg:items-center lg:justify-start">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                     {index === 0 ? (
                       <Sparkles className="h-5 w-5" />
@@ -187,7 +185,7 @@ export function HeroSection() {
                     )}
                   </div>
                   <div className="space-y-1">
-                    <p className="font-heading text-2xl font-semibold leading-tight tracking-tight text-foreground">
+                    <p className="font-heading text-xl font-semibold leading-tight tracking-tight text-foreground xl:text-2xl">
                       {metric.value}
                     </p>
                     <p className="text-sm leading-6 text-muted-foreground">
