@@ -42,13 +42,11 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="flex shrink-0 items-center gap-3">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <ThemeToggle />
           <Button asChild href="#contact" className="hidden sm:inline-flex">
-            <span>
-              Contact Us
-              <ArrowRight className="h-4 w-4" />
-            </span>
+            Contact Us
+            <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
       </div>

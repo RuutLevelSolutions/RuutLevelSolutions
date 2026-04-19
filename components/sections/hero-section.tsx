@@ -55,29 +55,26 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mx-auto flex w-full max-w-sm flex-col items-stretch justify-center gap-3 sm:max-w-none sm:flex-row sm:items-center">
             <Button
               asChild
               href="#services"
               size="lg"
-              className="bg-white text-[hsl(220_58%_17%)] shadow-[0_20px_45px_-20px_rgba(0,0,0,0.32)] hover:bg-white/95"
+              variant="inverse"
+              className="w-full sm:w-auto"
             >
-              <span>
-                Explore Solutions
-                <ArrowRight className="h-4 w-4" />
-              </span>
+              Explore Solutions
+              <ArrowRight className="h-4 w-4" />
             </Button>
             <Button
               asChild
               href="#contact"
               size="lg"
               variant="secondary"
-              className="border-white/20 bg-white/10 text-white hover:bg-white/15 hover:text-white"
+              className="w-full border-white/20 bg-white/10 text-white hover:border-white/35 hover:bg-white/15 hover:text-white sm:w-auto"
             >
-              <span>
-                <PlayCircle className="h-4 w-4" />
-                Contact Us
-              </span>
+              <PlayCircle className="h-4 w-4" />
+              Contact Us
             </Button>
           </div>
 
@@ -85,7 +82,7 @@ export function HeroSection() {
             {quickHighlights.map((item) => (
               <div
                 key={item}
-                className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur"
+                className="rounded-full border border-white/60 bg-white/85 px-4 py-2 text-sm font-medium text-slate-950 shadow-sm backdrop-blur dark:border-white/15 dark:bg-white/10 dark:text-white/90"
               >
                 {item}
               </div>
@@ -95,18 +92,18 @@ export function HeroSection() {
 
         <div className="mt-14 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <FadeIn delay={0.08}>
-            <Card className="overflow-hidden border-white/40 bg-white text-slate-950 shadow-[0_36px_90px_-42px_rgba(15,23,42,0.35)]">
+            <Card className="overflow-hidden border-white/40 bg-white text-slate-950 shadow-[0_36px_90px_-42px_rgba(15,23,42,0.35)] dark:border-white/10 dark:bg-slate-950 dark:text-white">
               <CardContent className="p-6 sm:p-8">
-                <div className="mb-6 flex items-center justify-between">
+                <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                   <div>
                     <p className="text-sm font-medium text-slate-500">
                       Ruut Level Solutions
                     </p>
-                    <h3 className="mt-1 font-heading text-2xl font-semibold tracking-tight sm:text-3xl">
+                    <h3 className="mt-1 font-heading text-2xl font-semibold tracking-tight text-slate-950 dark:text-white sm:text-3xl">
                       Turning local problems into digital products
                     </h3>
                   </div>
-                  <div className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                  <div className="inline-flex w-fit items-center justify-center whitespace-nowrap rounded-full bg-primary/10 px-3 py-1 text-center text-xs font-semibold leading-none text-primary">
                     Product-first
                   </div>
                 </div>
@@ -139,7 +136,7 @@ export function HeroSection() {
                   </div>
 
                   <div className="space-y-4">
-                    <div className="rounded-[1.75rem] border border-border/70 bg-accent/80 p-5">
+                    <div className="rounded-[1.75rem] border border-border/70 bg-accent/80 p-5 dark:bg-white/5">
                       <div className="mb-3 flex items-center gap-2 text-primary">
                         <Lightbulb className="h-4 w-4" />
                         <span className="text-xs font-semibold uppercase tracking-[0.24em]">
@@ -152,7 +149,7 @@ export function HeroSection() {
                       </p>
                     </div>
 
-                    <div className="rounded-[1.75rem] border border-border/70 bg-card p-5">
+                    <div className="rounded-[1.75rem] border border-border/70 bg-card p-5 dark:bg-white/5">
                       <div className="mb-3 flex items-center gap-2 text-primary">
                         <BriefcaseBusiness className="h-4 w-4" />
                         <span className="text-xs font-semibold uppercase tracking-[0.24em]">
@@ -171,15 +168,15 @@ export function HeroSection() {
             </Card>
           </FadeIn>
 
-          <FadeIn delay={0.14} className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+          <FadeIn delay={0.14} className="grid auto-rows-fr gap-4 sm:grid-cols-3 lg:grid-cols-1">
             {trustMetrics.map((metric, index) => (
               <Card
                 key={metric.label}
-                className={`overflow-hidden border-border/60 bg-card/92 ${
+                className={`h-full overflow-hidden border-border/60 bg-card/92 ${
                   index === 0 ? "lg:mt-8" : ""
                 }`}
               >
-                <CardContent className="flex items-center gap-4 p-6">
+                <CardContent className="flex h-full flex-col items-start gap-4 p-6 sm:justify-between lg:flex-row lg:items-center lg:justify-start">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                     {index === 0 ? (
                       <Sparkles className="h-5 w-5" />
@@ -189,11 +186,13 @@ export function HeroSection() {
                       <BriefcaseBusiness className="h-5 w-5" />
                     )}
                   </div>
-                  <div>
-                    <p className="font-heading text-2xl font-semibold tracking-tight text-foreground">
+                  <div className="space-y-1">
+                    <p className="font-heading text-2xl font-semibold leading-tight tracking-tight text-foreground">
                       {metric.value}
                     </p>
-                    <p className="text-sm text-muted-foreground">{metric.label}</p>
+                    <p className="text-sm leading-6 text-muted-foreground">
+                      {metric.label}
+                    </p>
                   </div>
                 </CardContent>
               </Card>

@@ -28,6 +28,8 @@ export function ContactForm() {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const fieldClassName =
+    "min-h-11 w-full rounded-2xl border border-border/70 bg-background/90 px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-muted-foreground/70 focus:border-primary/60 focus:ring-2 focus:ring-primary/20";
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -69,7 +71,10 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 rounded-[2rem] border border-border/70 bg-card/80 p-6 shadow-sm backdrop-blur">
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-5 rounded-[2rem] border border-border/70 bg-card/85 p-5 shadow-sm backdrop-blur sm:p-6"
+    >
       <div className="space-y-1">
         <h3 className="text-lg font-semibold text-foreground">Contact Us</h3>
         <p className="text-sm leading-6 text-muted-foreground">
@@ -88,7 +93,7 @@ export function ContactForm() {
             onChange={(event) =>
               setForm((current) => ({ ...current, name: event.target.value }))
             }
-            className="min-h-11 w-full rounded-2xl border border-border/70 bg-background/85 px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/20"
+            className={fieldClassName}
             placeholder="Your name"
           />
         </label>
@@ -102,7 +107,7 @@ export function ContactForm() {
             onChange={(event) =>
               setForm((current) => ({ ...current, email: event.target.value }))
             }
-            className="min-h-11 w-full rounded-2xl border border-border/70 bg-background/85 px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/20"
+            className={fieldClassName}
             placeholder="you@example.com"
           />
         </label>
@@ -117,7 +122,7 @@ export function ContactForm() {
           onChange={(event) =>
             setForm((current) => ({ ...current, subject: event.target.value }))
           }
-          className="min-h-11 w-full rounded-2xl border border-border/70 bg-background/85 px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/20"
+          className={fieldClassName}
           placeholder="Project enquiry"
         />
       </label>
@@ -131,13 +136,13 @@ export function ContactForm() {
           onChange={(event) =>
             setForm((current) => ({ ...current, message: event.target.value }))
           }
-          className="w-full rounded-3xl border border-border/70 bg-background/85 px-4 py-3 text-sm text-foreground outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/20"
+          className={`${fieldClassName} min-h-36 resize-y leading-6`}
           placeholder="A short note about your requirements"
         />
       </label>
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <Button type="submit" disabled={isSubmitting} className="sm:min-w-40">
+        <Button type="submit" disabled={isSubmitting} className="w-full sm:w-auto sm:min-w-40">
           {isSubmitting ? "Opening..." : "Open Email"}
         </Button>
         {status.type !== "idle" ? (

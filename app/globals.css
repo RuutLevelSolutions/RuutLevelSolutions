@@ -19,32 +19,32 @@
     --foreground: 222 47% 11%;
     --card: 0 0% 100%;
     --card-foreground: 222 47% 11%;
-    --primary: 204 86% 47%;
+    --primary: 204 86% 43%;
     --primary-foreground: 0 0% 100%;
     --secondary: 210 38% 93%;
     --secondary-foreground: 222 47% 11%;
     --muted: 210 32% 95%;
-    --muted-foreground: 215 16% 38%;
-    --accent: 198 45% 96%;
+    --muted-foreground: 215 17% 35%;
+    --accent: 198 45% 95%;
     --accent-foreground: 222 47% 11%;
-    --border: 214 28% 88%;
-    --ring: 204 86% 47%;
+    --border: 214 26% 85%;
+    --ring: 204 86% 43%;
   }
 
   .dark {
-    --background: 222 47% 7%;
+    --background: 222 42% 9%;
     --foreground: 210 40% 98%;
-    --card: 222 47% 10%;
+    --card: 222 38% 12%;
     --card-foreground: 210 40% 98%;
-    --primary: 199 92% 60%;
+    --primary: 199 92% 58%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 217 32% 17%;
+    --secondary: 217 30% 18%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 217 32% 14%;
-    --muted-foreground: 215 20% 70%;
-    --accent: 217 32% 16%;
+    --muted: 222 30% 15%;
+    --muted-foreground: 215 20% 74%;
+    --accent: 216 28% 19%;
     --accent-foreground: 210 40% 98%;
-    --border: 217 27% 18%;
+    --border: 217 24% 23%;
     --ring: 199 92% 60%;
   }
 
@@ -60,8 +60,8 @@
     @apply bg-background text-foreground antialiased;
     background-image:
       linear-gradient(to bottom, hsl(var(--background)), hsl(var(--background))),
-      radial-gradient(circle at top, hsl(var(--primary) / 0.1), transparent 26%),
-      radial-gradient(circle at bottom right, rgba(125, 211, 252, 0.14), transparent 24%);
+      radial-gradient(circle at top, hsl(var(--primary) / 0.09), transparent 26%),
+      radial-gradient(circle at bottom right, rgba(125, 211, 252, 0.12), transparent 24%);
     background-attachment: fixed;
     min-height: 100vh;
   }

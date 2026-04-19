@@ -33,19 +33,17 @@ export function CtaBanner() {
                   size="lg"
                   className="w-full bg-white text-slate-950 hover:bg-slate-100 sm:w-auto"
                 >
-                  <span>
-                    Contact Us
-                    <ArrowRight className="h-4 w-4" />
-                  </span>
+                  Contact Us
+                  <ArrowRight className="h-4 w-4" />
                 </Button>
                 <Button
                   asChild
                   href="mailto:enquiry@ruutlevelsolutions.com"
                   size="lg"
                   variant="secondary"
-                  className="w-full border-white/10 bg-white/5 text-white hover:bg-white/10 sm:w-auto"
+                  className="w-full border-white/10 bg-white/5 text-white hover:border-white/25 hover:bg-white/10 hover:text-white sm:w-auto"
                 >
-                  <span>enquiry@ruutlevelsolutions.com</span>
+                  enquiry@ruutlevelsolutions.com
                 </Button>
               </div>
             </CardContent>
