@@ -1,6 +1,5 @@
 import { AboutSection } from "@/components/sections/about-section";
 import { ClientsSection } from "@/components/sections/clients-section";
-import { CtaBanner } from "@/components/sections/cta-banner";
 import { HeroSection } from "@/components/sections/hero-section";
 import { PortfolioSection } from "@/components/sections/portfolio-section";
 import { ProductsVisionSection } from "@/components/sections/products-vision-section";
@@ -25,10 +24,9 @@ export default function HomePage() {
         <WhyUsSection />
         <ProcessSection />
         <PortfolioSection />
-        <ProductsVisionSection />
+        {/* <ProductsVisionSection /> */}
         <StatsSection />
         <TestimonialsSection />
-        <CtaBanner />
       </main>
       <SiteFooter />
     </div>

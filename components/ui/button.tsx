@@ -50,6 +50,16 @@ export function Button({
   );
 
   if (asChild && href) {
+    const isInternalHref = href.startsWith("/") || href.startsWith("#");
+
+    if (!isInternalHref) {
+      return (
+        <a href={href} className={classes}>
+          {children}
+        </a>
+      );
+    }
+
     return (
       <Link href={href} className={classes}>
         {children}

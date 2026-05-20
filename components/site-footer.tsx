@@ -1,7 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
 
 import { ContactForm } from "@/components/contact-form";
+import { FadeIn } from "@/components/motion/fade-in";
+import logo from "@/lib/assets/logo-full-cropped.jpeg";
 
 const quickLinks = [
   { label: "About", href: "#about" },
@@ -24,8 +27,7 @@ export function SiteFooter() {
       className="border-t border-border/60 bg-background/95 py-16 sm:py-20"
     >
       <div className="mx-auto max-w-7xl space-y-12 px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-10">
-          <div className="space-y-6 lg:pr-10">
+        <FadeIn className="mx-auto max-w-3xl space-y-6">
             <div className="space-y-3">
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">
                 Let&apos;s Talk
@@ -41,15 +43,21 @@ export function SiteFooter() {
             </div>
 
             <ContactForm />
-          </div>
+        </FadeIn>
 
-          <div className="grid gap-10 sm:grid-cols-2 xl:grid-cols-[1.1fr_0.9fr_0.9fr]">
-            <div className="space-y-5 sm:col-span-2 xl:col-span-1">
+        <div className="grid gap-10 border-t border-border/60 pt-8 text-sm sm:grid-cols-2 lg:grid-cols-4">
+          <div className="space-y-5">
               <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary text-lg font-bold text-primary-foreground shadow-lg shadow-primary/25">
-                  R
+                <div className="relative h-20 w-48 shrink-0 overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-border/60">
+                  <Image
+                    src={logo}
+                    alt="Ruut Level Solutions logo"
+                    fill
+                    className="object-contain p-1"
+                    sizes="192px"
+                  />
                 </div>
-                <div>
+                <div className="sr-only">
                   <p className="font-heading text-xl font-semibold">
                     Ruut Level Solutions
                   </p>
@@ -65,8 +73,10 @@ export function SiteFooter() {
               </p>
               <div className="flex items-center gap-3">
                 <Link
-                  href="#"
+                  href="https://www.linkedin.com/in/ruut-level-solution-4453b43b9"
                   aria-label="LinkedIn"
+                  target="_blank"
+                  rel="noreferrer"
                   className="rounded-full border border-border/70 p-3 text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
                 >
                   <Linkedin className="h-4 w-4" />
@@ -79,59 +89,23 @@ export function SiteFooter() {
                   <Twitter className="h-4 w-4" />
                 </Link>
               </div>
-            </div>
-
-            <div className="space-y-5">
-              <h3 className="mb-5 text-sm font-semibold uppercase tracking-[0.24em] text-foreground/80">
-                Quick Links
-              </h3>
-              <ul className="space-y-3 text-sm text-muted-foreground">
-                {quickLinks.map((item) => (
-                  <li key={item.label}>
-                    <Link href={item.href} className="hover:text-foreground">
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="space-y-5 text-sm text-muted-foreground">
-              <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-foreground/80">
-                Contact
-              </h3>
-              <div className="space-y-4">
-                <p className="flex items-start gap-3 leading-6">
-                  <Mail className="mt-1 h-4 w-4 shrink-0 text-primary" />
-                  <Link
-                    href="mailto:enquiry@ruutlevelsolutions.com"
-                    className="break-all hover:text-foreground"
-                  >
-                    enquiry@ruutlevelsolutions.com
-                  </Link>
-                </p>
-                <p className="flex items-start gap-3 leading-6">
-                  <Phone className="mt-1 h-4 w-4 shrink-0 text-primary" />
-                  <Link
-                    href="tel:+917219311914"
-                    className="hover:text-foreground"
-                  >
-                    +91 72193 11914
-                  </Link>
-                </p>
-                <p className="flex items-start gap-3 leading-6">
-                  <MapPin className="mt-1 h-4 w-4 shrink-0 text-primary" />
-                  <span>
-                    H.O. Aanand Nagar, Shivneri Gate, Bhadgaon, Dist. Jalgaon
-                    424105
-                  </span>
-                </p>
-              </div>
-            </div>
           </div>
-        </div>
 
-        <div className="grid gap-10 border-t border-border/60 pt-8 text-sm sm:grid-cols-2 lg:grid-cols-4">
+          <div className="space-y-5">
+            <h3 className="mb-5 text-sm font-semibold uppercase tracking-[0.24em] text-foreground/80">
+              Quick Links
+            </h3>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              {quickLinks.map((item) => (
+                <li key={item.label}>
+                  <Link href={item.href} className="hover:text-foreground">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <div className="space-y-5">
             <h3 className="mb-5 text-sm font-semibold uppercase tracking-[0.24em] text-foreground/80">
               Services
@@ -147,19 +121,47 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          <div className="sm:col-span-2 lg:col-span-3">
-            <p className="max-w-3xl text-sm leading-7 text-muted-foreground">
-              Prefer direct email? Use
-              {" "}
-              <Link
-                href="mailto:enquiry@ruutlevelsolutions.com"
-                className="font-medium text-foreground hover:text-primary"
-              >
-                enquiry@ruutlevelsolutions.com
-              </Link>
-              {" "}
-              and we&apos;ll pick it up there too.
-            </p>
+          <div className="space-y-5 text-sm text-muted-foreground">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-foreground/80">
+              Contact
+            </h3>
+            <div className="space-y-4">
+              <p className="flex items-start gap-3 leading-6">
+                <Mail className="mt-1 h-4 w-4 shrink-0 text-primary" />
+                <Link
+                  href="mailto:enquiry@ruutlevelsolutions.com"
+                  className="break-all hover:text-foreground"
+                >
+                  enquiry@ruutlevelsolutions.com
+                </Link>
+              </p>
+              <p className="flex items-start gap-3 leading-6">
+                <Phone className="mt-1 h-4 w-4 shrink-0 text-primary" />
+                <Link
+                  href="tel:+917219311914"
+                  className="hover:text-foreground"
+                >
+                  +91 72193 11914
+                </Link>
+              </p>
+              <p className="flex items-start gap-3 leading-6">
+                <MapPin className="mt-1 h-4 w-4 shrink-0 text-primary" />
+                <span>
+                  H.O. Aanand Nagar, Shivneri Gate, Bhadgaon, Dist. Jalgaon
+                  424105
+                </span>
+              </p>
+              <p className="leading-7">
+                Prefer direct email? Use{" "}
+                <Link
+                  href="mailto:enquiry@ruutlevelsolutions.com"
+                  className="font-medium text-foreground hover:text-primary"
+                >
+                  enquiry@ruutlevelsolutions.com
+                </Link>{" "}
+                and we&apos;ll pick it up there too.
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,8 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
+import headerLogo from "@/lib/assets/logo-full-cropped.jpeg";
 
 const navigation = [
   { label: "About", href: "#about" },
@@ -16,11 +18,18 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/40 bg-background/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-8">
-        <Link href="/" className="flex min-w-0 items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-[1.35rem] bg-primary text-lg font-bold text-primary-foreground shadow-lg shadow-primary/25">
-            R
+        <Link href="/" className="flex min-w-0 items-center">
+          <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-border/60 sm:h-20 sm:w-24">
+            <Image
+              src={headerLogo}
+              alt="Ruut Level Solutions logo"
+              fill
+              className="object-contain"
+              sizes="(min-width: 640px) 96px, 80px"
+              priority
+            />
           </div>
-          <div className="min-w-0">
+          <div className="sr-only">
             <p className="truncate font-heading text-lg font-semibold tracking-tight">
               Ruut Level Solutions
             </p>
