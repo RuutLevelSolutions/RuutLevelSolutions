@@ -151,16 +151,6 @@ export function SiteFooter() {
                   424105
                 </span>
               </p>
-              <p className="leading-7">
-                Prefer direct email? Use{" "}
-                <Link
-                  href="mailto:enquiry@ruutlevelsolutions.com"
-                  className="font-medium text-foreground hover:text-primary"
-                >
-                  enquiry@ruutlevelsolutions.com
-                </Link>{" "}
-                and we&apos;ll pick it up there too.
-              </p>
             </div>
           </div>
         </div>
